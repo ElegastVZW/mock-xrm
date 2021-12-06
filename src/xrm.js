@@ -195,7 +195,4 @@ const xrm = {
   getName: () => "Xrm",
 };
 
-module.exports = { 
-  xrm
-}
-
+export default xrm;
