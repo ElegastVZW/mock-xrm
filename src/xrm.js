@@ -1,6 +1,7 @@
 import 'whatwg-fetch';
 import webApi from './webApi';
 import utility from './utility';
+import navigation from './navigation';
 
 const xrm = {
   ActionCollectionBase: () => {},
@@ -61,7 +62,7 @@ const xrm = {
   LookupStyle: () => {},
   MetricsStopwatch: () => {},
   Mobile: () => {},
-  Navigation: () => {},
+  Navigation: () => navigation,
   NotificationLevel: () => {},
   NumberEx: () => {},
   Objects: () => {},
