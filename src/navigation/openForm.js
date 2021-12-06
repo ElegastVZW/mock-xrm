@@ -1,12 +1,12 @@
 import {CLIENT_URL} from '../consts';
 
-const openForm = async (entityFormOptions, formParameters) => {
-
-    let redirectUrl = CLIENT_URL+"?pagetype=entityrecord";
+const openForm = async (entityFormOptions, formParameters = {}) => {
+    
+    let redirectUrl = CLIENT_URL+"/main.aspx?pagetype=entityrecord";
     let openWhere = "_blank";
-
+    
     if(entityFormOptions["entityName"]){
-        redirectUrl += "&ent="+entityFormOptions["entityName"];
+        redirectUrl += "&etn="+entityFormOptions["entityName"];
     }
 
     if(entityFormOptions["entityId"]){

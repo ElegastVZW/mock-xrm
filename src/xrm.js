@@ -62,7 +62,7 @@ const xrm = {
   LookupStyle: () => {},
   MetricsStopwatch: () => {},
   Mobile: () => {},
-  Navigation: () => navigation,
+  Navigation: navigation,
   NotificationLevel: () => {},
   NumberEx: () => {},
   Objects: () => {},
