@@ -1,5 +1,12 @@
 {
-    "name": "mock-xrm",
+    "name": "elegast-mock-xrm",
+    "version": "0.0.2",
+    "main": "xrm.js",
+    "author": "elegastvzw",
+    "license": "MIT",
+    "publishConfig": {
+        "access": "public"
+      },
     "scripts": {
         "build": "rollup -c",
         "test": "jest --ci --coverage"
