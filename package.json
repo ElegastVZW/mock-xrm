@@ -1,12 +1,12 @@
 {
     "name": "elegast-mock-xrm",
-    "version": "0.0.3",
+    "version": "0.0.6",
     "main": "./src/xrm.js",
     "author": "elegastvzw",
     "license": "MIT",
     "publishConfig": {
         "access": "public"
-      },
+    },
     "scripts": {
         "build": "rollup -c",
         "test": "jest --ci --coverage"
@@ -44,6 +44,7 @@
     "dependencies": {
         "core-js": "^2.6.12",
         "debug": "^4.1.1",
+        "dotenv": "^10.0.0",
         "jest-fetch-mock": "^3.0.3",
         "js-cookie": "^2.2.1",
         "node-fetch": "^2.6.1",

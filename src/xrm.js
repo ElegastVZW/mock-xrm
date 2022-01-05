@@ -4,6 +4,7 @@ import utility from './utility';
 import navigation from './navigation';
 
 const xrm = {
+  AUTH_KEY: null,
   ActionCollectionBase: () => {},
   AlertDialogStrings: () => {},
   ArrayEx: () => {},
@@ -194,6 +195,8 @@ const xrm = {
   XrmUtility: () => {},
   XrmViewSelector: () => {},
   getName: () => "Xrm",
+  setAuth: function(auth){ globalThis.AUTH_KEY = auth;},
+  getAuth: () => globalThis.AUTH_KEY
 };
 
 export default xrm;
