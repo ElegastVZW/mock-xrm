@@ -1,4 +1,4 @@
-const LOCALHOST = 'https://elegast.crm4.dynamics.com';
+const LOCALHOST = 'https://elegastsandbox.crm4.dynamics.com';
 const WEBAPI = `${typeof(process) === 'object' ? LOCALHOST : ''}/api/data/v9.0`;
 const WHOAMI = 'WhoAmI';
 const GET = 'GET';

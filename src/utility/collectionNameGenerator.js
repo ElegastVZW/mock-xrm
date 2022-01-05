@@ -1,5 +1,5 @@
 const collectionNameGenerator = function(name) {
-    console.log(name);
+    if(name){
     let lastLetter = name.charAt(name.length-1);
     let multiplier = "s";
 
@@ -8,6 +8,8 @@ const collectionNameGenerator = function(name) {
     }
 
     return name+multiplier;
+    }
+    return name;
 };
 
 export default collectionNameGenerator;

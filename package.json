@@ -1,7 +1,7 @@
 {
     "name": "elegast-mock-xrm",
-    "version": "0.0.2",
-    "main": "xrm.js",
+    "version": "0.0.3",
+    "main": "./src/xrm.js",
     "author": "elegastvzw",
     "license": "MIT",
     "publishConfig": {

@@ -1,11 +1,10 @@
-# mock-xrm
+# elegast-mock-xrm
 
-npm install
+Elegast mock xrm is gebasseerd op mock-xrm.
+Het biedt een library om de basis functionaliteiten van Xrm.WebApi te gebruiken in webresources na de decrepations van ClientGlobalContext.aspx
 
-npm run build
+-- Install
+npm install elegast-mock-xrm
 
---Run server
-node server/app
-
---Run test
-npm run test
+-- Source
+https://github.com/ElegastVZW/mock-xrm
