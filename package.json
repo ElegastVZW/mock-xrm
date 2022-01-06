@@ -1,6 +1,6 @@
 {
     "name": "elegast-mock-xrm",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "main": "./src/xrm.js",
     "author": "elegastvzw",
     "license": "MIT",
@@ -42,7 +42,7 @@
         "rollup-plugin-terser": "^5.2.0"
     },
     "dependencies": {
-        "core-js": "^2.6.12",
+        "core-js": "^3.4",
         "debug": "^4.1.1",
         "dotenv": "^10.0.0",
         "jest-fetch-mock": "^3.0.3",
