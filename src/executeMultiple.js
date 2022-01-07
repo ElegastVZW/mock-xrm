@@ -7,7 +7,7 @@ const executeMultiple = async (data) => {
     try {
     let preparedData = await prepareBatchRequest(uniqueId,data);
 
-    let response = await executePost(preparedData)('$batch')({ 'content-type': 'multipart/mixed;boundary=batch_'+uniqueId, 'Prefer': 'odata.continue-on-error' });
+    let response = await executePost(preparedData)('$batch')({'Accept': 'application/json', 'content-type': 'multipart/mixed;boundary=batch_'+uniqueId });
 
     return Promise.resolve(response);
 

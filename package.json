@@ -1,6 +1,6 @@
 {
     "name": "elegast-mock-xrm",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "main": "./src/xrm.js",
     "author": "elegastvzw",
     "license": "MIT",
@@ -42,6 +42,7 @@
         "rollup-plugin-terser": "^5.2.0"
     },
     "dependencies": {
+        "@azure/msal-node": "^1.5.0",
         "core-js": "^3.4",
         "debug": "^4.1.1",
         "dotenv": "^10.0.0",

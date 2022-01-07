@@ -6,6 +6,8 @@ import orgUniqueName from "./orgUniqueName";
 
 const executeFetch = (method) => (data) => (action) => async (headers) => {
   let orgName = "";
+  let dataFormat = data && JSON.stringify(data)
+
   if (isOnPremises()) {
     orgName = await orgUniqueName();
   }
@@ -18,12 +20,16 @@ const executeFetch = (method) => (data) => (action) => async (headers) => {
     headers['Authorization'] = 'Bearer '+xrm.getAuth();
   }
 
+  if(action === "$batch"){
+    dataFormat = data;
+  }
+
   return fetch(`${orgName ? '/' + orgName : orgName}${WEBAPI}/${action}`, {
     headers: {
       ...headers,
     },
     method: method,
-    body: data && JSON.stringify(data),
+    body: dataFormat,
   });
 };
 
