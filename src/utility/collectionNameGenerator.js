@@ -7,6 +7,11 @@ const collectionNameGenerator = function(name) {
         multiplier = "es";
     }
 
+    
+    if(name === "savedquery"){
+        name = "savedquerie";
+    }
+    
     return name+multiplier;
     }
     return name;

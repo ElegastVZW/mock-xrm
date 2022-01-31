@@ -1,10 +1,13 @@
-import 'whatwg-fetch';
 import webApi from './webApi';
 import utility from './utility';
 import navigation from './navigation';
+// import authToMicrosoft from "./utility/auth";
+import getAttributes from './retrieveAttributes';
+import countRecords from './retrieveTotalRecordCount';
 
 const xrm = {
   AUTH_KEY: null,
+  // AuthToMicrosoft: authToMicrosoft,
   ActionCollectionBase: () => {},
   AlertDialogStrings: () => {},
   ArrayEx: () => {},
@@ -23,6 +26,7 @@ const xrm = {
   ConfirmDialogStrings: () => {},
   Constants: () => {},
   ControlType: () => {},
+  CountRecords: countRecords,
   DataLoadEventArgs: () => {},
   DataLoadState: () => {},
   DateFormattingInfo: () => {},
@@ -49,6 +53,7 @@ const xrm = {
   FormSaveAction: () => {},
   FormType: () => {},
   Gen: () => {},
+  GetAttributes: getAttributes,
   GridType: () => {},
   IBusinessRuleNotificationProvider: () => {},
   IsMockXrm: () => true,
