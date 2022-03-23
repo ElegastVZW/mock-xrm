@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <HelloWorld msg="XRM TEST APP :)" />
-    Huidige omgeving: {{ currentDomain }}<br />
     Huidige Auth token: {{ currentAuthCode }}
     <ul>
       <li v-for="user in testData" v-bind:key="user.systemuserid">

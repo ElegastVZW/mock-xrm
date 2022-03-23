@@ -5,8 +5,11 @@ import Xrm from "../../../src/xrm";
 Vue.config.productionTip = false;
 
 (async () => {
-  await Xrm.AuthToMicrosoft();
+  if (process.env.NODE_ENV !== "production") {
+    await Xrm.AuthToMicrosoft();
+  }
   new Vue({
+    // store: store,
     render: (h) => h(App),
   }).$mount("#app");
 })();
