@@ -1,13 +1,25 @@
-import webApi from './webApi';
-import utility from './utility';
-import navigation from './navigation';
+import webApi from "./webApi.js";
+import utility from "./utility.js";
+import navigation from "./navigation.js";
 // import authToMicrosoft from "./utility/auth";
-import getAttributes from './retrieveAttributes';
-import countRecords from './retrieveTotalRecordCount';
+import getAttributes from "./retrieveAttributes.js";
+import countRecords from "./retrieveTotalRecordCount.js";
+import { login } from "./auth.js";
 
 const xrm = {
+  _mainOrg: "https://elegastsandbox.crm4.dynamics.com",
   AUTH_KEY: null,
-  // AuthToMicrosoft: authToMicrosoft,
+  AuthToMicrosoft: async () => {
+    // This is in BETA!
+    try {
+      const loginResponse = await login();
+      if (loginResponse !== null || loginResponse.accessToken) {
+        xrm.setAuth(loginResponse.accessToken);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  },
   ActionCollectionBase: () => {},
   AlertDialogStrings: () => {},
   ArrayEx: () => {},
@@ -200,8 +212,11 @@ const xrm = {
   XrmUtility: () => {},
   XrmViewSelector: () => {},
   getName: () => "Xrm",
-  setAuth: function(auth){ globalThis.AUTH_KEY = auth;},
-  getAuth: () => globalThis.AUTH_KEY
+  setAuth: function (auth) {
+    globalThis.AUTH_KEY = auth;
+  },
+  getAuth: () => globalThis.AUTH_KEY,
+  getOrg: () => globalThis._mainOrg,
 };
 
 export default xrm;

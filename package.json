@@ -9,7 +9,8 @@
     },
     "scripts": {
         "build": "rollup -c",
-        "test": "jest --ci --coverage"
+        "test": "jest --ci --coverage",
+        "start": "npm run build && node ./server/app.js"
     },
     "devDependencies": {
         "@babel/core": "^7.6.2",
@@ -42,11 +43,15 @@
         "rollup-plugin-terser": "^5.2.0"
     },
     "dependencies": {
+        "@azure/msal-browser": "^2.22.1",
         "@azure/msal-node": "^1.5.0",
         "core-js": "^3.4",
         "debug": "^4.1.1",
         "jest-fetch-mock": "^3.0.3",
         "js-cookie": "^2.2.1",
         "node-fetch": "^2.6.1"
+    },
+    "engines": {
+        "node": ">=12"
     }
 }

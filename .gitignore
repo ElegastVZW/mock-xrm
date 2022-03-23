@@ -4,6 +4,9 @@
 # debug 
 /debug
 
+/server/node_modules
+/server/coverage
+
 # codecov
 /coverage
 .fake
